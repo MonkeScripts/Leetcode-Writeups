@@ -12,5 +12,6 @@ int main(){
         //state person choosing the last day of duty + min days(dp) before reaching the last day
         result[i] = std::min(std::min(result[i-1],result[i-2]),result[i-3]) + dutylist[i];
     }
-    std::cout<<19-std::min(std::min(result.end()[-1],result.end()[-2]),result.end()[-3])<<std::endl;
+    //checks last 3 values of dp array to get the lowest duty hours
+    std::cout<<std::min(std::min(result.end()[-1],result.end()[-2]),result.end()[-3])<<std::endl;
 }
