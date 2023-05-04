@@ -13,6 +13,7 @@ bool check(int numbers[],int size, int index, int target){
 }
 
 //alternative solution: subtracts all the way, return true if reaches 0, false if not 
+//note that we start from the end of the array
 bool alternative(int numbers[],int index, int sum){
     //base case
     if(index < 0) return (sum == 0);
