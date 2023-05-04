@@ -20,6 +20,7 @@ bool alternative(int numbers[],int index, int sum){
     bool ans = false;
     //choice to include
     if(sum>=numbers[index]){
+        //- sum from numbers[index], index -1 to shift to the next index
         ans |= alternative(numbers,index-1,sum-numbers[index]);
     }
     //choice to exclude,if one of them is fulfilled , return true
